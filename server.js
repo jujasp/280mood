@@ -6,10 +6,6 @@ const Twitter = require('Twitter')
 const path = require('path')
 const secrets = require('./secrets.js')
 
-
-
-passport.use(strategy)
-
 passport.serializeUser((user, done) => {
     done(null, user);
 })
