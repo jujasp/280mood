@@ -24,7 +24,7 @@ app.use(require('express-session')({secret: 'blossombellascskye', resave: true, 
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.use('/twitter', require('./twitter'))
+app.use('/api', require('./twitter'))
 
 app.use(express.static(path.join(__dirname, 'public')))
 
