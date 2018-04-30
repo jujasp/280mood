@@ -6,13 +6,7 @@ const Twitter = require('Twitter')
 const path = require('path')
 const secrets = require('./secrets.js')
 
-const strategy = new TwitterStrategy({
-    consumerKey: process.env.TWITTER_CONSUMER_KEY,
-    consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-    callbackURL: process.env.TWITTER_CALLBACK_URL
-}, (token, tokenSecret, profile, done) => {
-    return done(null, profile, {access_token_key: token, access_token_secret: tokenSecret})
-})
+
 
 passport.use(strategy)
 
@@ -33,6 +27,8 @@ app.use(require('express-session')({secret: 'blossombellascskye', resave: true, 
 
 app.use(passport.initialize())
 app.use(passport.session())
+
+app.use('/twitter', require('./twitter'))
 
 app.use(express.static(path.join(__dirname, 'public')))
 
