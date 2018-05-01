@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import { Link } from 'react-router'
-
+import Graphs from './Graphs'
+//TO DO ADD REACT-ROUTER TO RESOLVE 'FLICKERING' IN ASYNC
 export default class App extends React.Component {
     constructor(){
     super()
@@ -26,32 +26,37 @@ export default class App extends React.Component {
 
     render() {
         if(!this.state.checked) {
-            return (
-                <div> yikes</div>
-            )
+            return <div />
         } else if (!this.state.user.id) {
             return (
                 <div>
-                    <button><Link to="/login/twitter">Log In!</Link></button>
+                    <a href="/login/twitter">Log In!</a>
                 </div>
             )
         } else {
+            {console.log(this.state)}
             return (
                 <div>
                     <h1>BIG FEELS</h1>
-                    <div>
-                        <h2>{this.state.displayName}</h2>
-                        <h3>{this.state.user.username}</h3>
+                    <div id="content">
+                        <div id="stats">
+                            <img src={this.state.user.photos[0].value} />
+                            <div>
+                                <h2>{this.state.user.displayName}</h2>
+                                <h3>{this.state.user.username}</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Total tweets: {this.state.tweetFacts.totalTweets}</p>
+                            <p>Word Count:{this.state.response.word_count}</p>
+                            <p>First tweet: {this.state.tweetFacts.firstTweet}</p> 
+                            <p>Last tweet: {this.state.tweetFacts.lastTweet}</p>
+                        </div>
+                        </div>
+                        <div id="graphs">
+                            <Graphs data={this.state.response} />
+                        </div>
                     </div>
-                    <div>
-                        <p>First tweet: </p> 
-                        <p>Last tweet: </p>
-                    </div>
-                    <div>
-                        <p>Number of tweets: </p>
-                        <p>Number to words:</p>
-                    </div>
-                </div>
             )
         }
     }
