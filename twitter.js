@@ -24,10 +24,9 @@ const personality_insights = new PersonalityInsightV3({
 
 passport.use(strategy)
 
-router.get('/login', 
-('twitter', {authInfo: true}));
+router.get('/', passport.authenticate('twitter', {authInfo: true}))
 
-router.get('/login/return', 
+router.get('/return', 
   passport.authenticate('twitter', { failureRedirect: '/login' }),
   (req, res) => {
     req.session.authInfo = req.authInfo
