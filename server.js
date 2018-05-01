@@ -24,11 +24,11 @@ app.use(require('express-session')({secret: 'blossombellascskye', resave: true, 
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.use('/twitter', require('./twitter'))
+app.use('/login', require('./twitter'))
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('*', (req, res) => {
+app.use('/', (req, res) => {
     console.log(__dirname)
     res.sendFile(path.join(__dirname, 'public/index.html'))
 })
