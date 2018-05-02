@@ -25,7 +25,7 @@ export default class App extends React.Component {
     }
 
     render() {
-        if(!this.state.checked) {
+        if (!this.state.checked) {
             return <div />
         } else if (!this.state.user.id) {
             return (
@@ -34,22 +34,20 @@ export default class App extends React.Component {
                 </div>
             )
         } else {
-            {console.log(this.state)}
             return (
                 <div>
-                    <h1>BIG FEELS</h1>
                     <div id="content">
-                        <div id="stats">
+                        <div id="userInfo">
                             <img src={this.state.user.photos[0].value} />
                             <div>
                                 <h2>{this.state.user.displayName}</h2>
                                 <h3>{this.state.user.username}</h3>
                             </div>
                         </div>
-                        <div>
+                        <div id="userTweets">
                             <p>Total tweets: {this.state.tweetFacts.totalTweets}</p>
                             <p>Word Count:{this.state.response.word_count}</p>
-                            <p>First tweet: {this.state.tweetFacts.firstTweet}</p> 
+                            <p>First tweet: {this.state.tweetFacts.firstTweet}</p>
                             <p>Last tweet: {this.state.tweetFacts.lastTweet}</p>
                         </div>
                         </div>

@@ -2,10 +2,27 @@ body > *  {
     display: block;
     font-family: sans-serif;
 }
+
+#header {
+    font-size: 200%;
+    background-color:#E27D60;
+    height: 10%; 
+}
+
+#userInfo {
+    background-color: #85DCB0;
+}
+
+#userTweets {
+    background-color: #E8A87C
+    
+}
+
 #graphs {
     height: 100%;
     width: 100%;
 }
+
 #stats {
     display: flex;
     flex-direction: row;
