@@ -35,7 +35,7 @@ export default class App extends React.Component {
                 <div>
                     <Header />
                     {/* <About /> */}
-                    <a href="/login/twitter">Log In!</a>
+                    <a href="/login/twitter">Log In 2 Begin</a>
                 </div>
             )
         } else {
@@ -45,6 +45,10 @@ export default class App extends React.Component {
                     <UserInfo user={this.state.user} />
                     <UserTweet tweetFacts={this.state.tweetFacts} response={this.state.response} />
                     <Graphs data={this.state.response} />
+                    {/* TO DOs */}
+                    {/* <About /> */}
+                    {/* <SearchForm /> */}
+                    {/* <Footer /> */}
                 </div>
             )
         }
