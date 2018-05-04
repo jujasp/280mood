@@ -1,21 +1,58 @@
-body > *  {
-    display: block;
-    font-family: sans-serif;
+@font-face {
+    font-family: HKGrotesk;
+    src: url(/fonts/hk-grotesk/HKGrotesk-Regular.otf);
 }
 
-#header {
-    font-size: 200%;
-    background-color:#E27D60;
-    height: 10%; 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
 }
 
-#userInfo {
-    background-color: #85DCB0;
+body {
+    color: #ede7dc;
+    text-align: left;
+    font-weight: 900;
+    font-family: "HKGrotesk", sans-serif;
 }
 
-#userTweets {
-    background-color: #E8A87C
-    
+.section {
+    padding: 2rem 1rem;
+    width: 100vw;
+    box-sizing: border-box;
+    border-bottom: 2px solid #000;
+}
+
+.header {
+    background: #ea4632;
+    text-align: center;
+}
+
+.info {
+    background: #91bfc0;
+    text-align: center;
+}
+
+#avi {
+    padding-right: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#userNames {
+    vertical-align: middle;
+    display: inline-block;
+    text-align: left;
+}
+
+.tweets {
+    background: #3451b2;
+}
+
+.tweets > * {
+    padding-bottom: 0.5rem;
 }
 
 #graphs {

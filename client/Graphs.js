@@ -8,9 +8,7 @@ export default class Graphs extends React.Component {
     }
 
     render(){
-        console.log(this.props)
         return (
-            <ResponsiveContainer>
                 <RadarChart outerRadius={90} width={730} height={250} data={this.props.data.needs}>
                     <PolarGrid />
                     <PolarAngleAxis dataKey="name" />
@@ -18,7 +16,6 @@ export default class Graphs extends React.Component {
                     <Radar name="Lily" dataKey="percentile" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
                     <Legend />
                 </RadarChart>
-            </ResponsiveContainer>
         )
     }
 }
