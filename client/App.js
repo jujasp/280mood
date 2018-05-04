@@ -4,7 +4,7 @@ import Graphs from './Graphs'
 import Header from './Header'
 import UserInfo from './UserInfo'
 import UserTweet from './UserTweet'
-//TO DO ADD REACT-ROUTER TO RESOLVE 'FLICKERING' IN ASYNC
+import Loader from './Loader'
 
 export default class App extends React.Component {
     constructor(){
@@ -18,7 +18,6 @@ export default class App extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.state)
         axios.get('/login/data')
         .then(res => res.data)
         .then(data => {
@@ -30,11 +29,12 @@ export default class App extends React.Component {
 
     render() {
         if (!this.state.checked) {
-            return <div />
+            return <Loader />
         } else if (!this.state.user.id) {
             return (
                 <div>
                     <Header />
+                    {/* <About /> */}
                     <a href="/login/twitter">Log In!</a>
                 </div>
             )

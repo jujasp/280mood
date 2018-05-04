@@ -35,6 +35,10 @@ body {
     text-align: center;
 }
 
+.tweets {
+    background: #3451b2;
+}
+
 #avi {
     padding-right: 2rem;
     display: inline-block;
@@ -46,6 +50,24 @@ body {
     display: inline-block;
     text-align: left;
 }
+
+#loader {
+    overflow: hidden;
+    background: #ea4632;
+    font-size: 72px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loaderDiv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}​
 
 .tweets {
     background: #3451b2;
