@@ -15,15 +15,24 @@ const Header = () => {
 
     return (
         <div className="section header">
-            <div className="emoticons">
-                <h1>{randomEmoji()}</h1><h1>{randomEmoji()}</h1><h1>{randomEmoji()}</h1>
+            {/* <div className="emoticons">
+                <h3>{randomEmoji()}</h3><h3>{randomEmoji()}</h3><h3>{randomEmoji()}</h3>
+            </div> */}
+            {/* <marquee><h3>{randomEmoji()}</h3><h3>{randomEmoji()}</h3><h3>{randomEmoji()}</h3></marquee> */}
+            <div id="headertxt" className="jump">
+                <span className="skew">B</span>
+                    I
+                    <span className="skew">G</span>
+                     
+                    <span className="skew">M</span>
+                    O
+                    <span className="skew">O</span>
+                    D
+                    <span className="skew">S</span>
             </div>
-            <div>
-                <h1> BIG MOODS </h1>
-            </div>
-            <div className="emoticons">
-                <h1>{randomEmoji()}</h1><h1>{randomEmoji()}</h1><h1>{randomEmoji()}</h1>
-            </div>
+            {/* <div className="emoticons">
+                <h3>{randomEmoji()}</h3><h3>{randomEmoji()}</h3><h3>{randomEmoji()}</h3>
+            </div> */}
         </div>
     )
 }

@@ -3,12 +3,55 @@
     src: url(/fonts/hk-grotesk/HKGrotesk-Regular.otf);
 }
 
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+
+
+@-webkit-keyframes jump {
+    0%{
+      -webkit-transform: translateY(0)  skewX(15deg);
+      transform: translateY(0)  skewX(15deg);
+    }
+    50%{
+      -webkit-transform: translateY(50%)  skewX(-15deg);
+      transform: translateY(50%)  skewX(-15deg);
+    }
+    100%{
+      -webkit-transform: translateY(0) skewX(-15deg);
+      transform: translateY(0) skewX(-15deg);
+    }
+  }
+  
+  @keyframes jump {
+    0%{
+        -webkit-transform: translateY(0)  skewX(15deg);
+        transform: translateY(0)  skewX(15deg);
+      }
+      50%{
+        -webkit-transform: translateY(50%)  skewX(0);
+        transform: translateY(50%)  skewX(0);
+      }
+      100%{
+        -webkit-transform: translateY(0) skewX(115deg);
+        transform: translateY(0) skewX(-15deg);
+      }
+    }
+    
 * {
     margin: 0;
     padding: 0;
     border: 0;
     vertical-align: baseline;
     -webkit-font-smoothing: antialiased;
+    color: #FFEEDD;
 }
 
 body {
@@ -19,26 +62,57 @@ body {
 }
 
 .section {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     width: 100vw;
     box-sizing: border-box;
     border-bottom: 2px solid #000;
 }
 
 .login {
-    background: greenyellow;
-    padding: 3rem 1rem 2rem 1rem;
+    background: #249dc0;
+    text-align: center;
 }
 
 .header {
     background: #ea4632;
+    color: #FFEEDD;
     text-align: center;
 }
 
 .header > * {
     display: inline-block;
+    
 }
 
+.header > marquee {
+    position: absolute;
+    left: -.7rem;
+    top: 1rem;
+    width: 100%;
+    opacity: .5;
+}
+
+.header > marquee > * {
+    display: inline-block;
+}
+
+#headertxt {
+    position: relative;
+}
+
+#headertxt > * {
+    position: relative;
+}
+
+.blink {
+    animation: blink-animation 2s steps(5, start) infinite;
+    -webkit-animation: blink-animation 2s steps(5, start) infinite;
+}
+
+.jump {
+    animation: jump 2s steps(5, start) infinite alternate-reverse;
+    -webkit-animation: jump 2s steps(5, start) infinite alternate-reverse;
+}
 
 .emoticons > * {
     display: inline-block;
@@ -47,10 +121,10 @@ body {
 
 .footer {
     background-color: orange;
-    position: absolute;
-    left: 0;
+    position: relative;
     bottom: 0;
     overflow: hidden;
+    font-size: 0.5em;
 }
 
 .info {
