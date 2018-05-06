@@ -5,6 +5,9 @@ import Header from './Header'
 import UserInfo from './UserInfo'
 import UserTweet from './UserTweet'
 import Loader from './Loader'
+import Footer from './Footer'
+import About from './About'
+import Login from './Login'
 
 export default class App extends React.Component {
     constructor(){
@@ -34,8 +37,9 @@ export default class App extends React.Component {
             return (
                 <div>
                     <Header />
-                    {/* <About /> */}
-                    <a href="/login/twitter">Log In 2 Begin</a>
+                    <About />
+                    <Login />
+                    <Footer />
                 </div>
             )
         } else {
@@ -48,7 +52,7 @@ export default class App extends React.Component {
                     {/* TO DOs */}
                     {/* <About /> */}
                     {/* <SearchForm /> */}
-                    {/* <Footer /> */}
+                    <Footer />
                 </div>
             )
         }

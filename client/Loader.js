@@ -25,7 +25,7 @@ class Loader extends React.Component {
         let randomCharCode = Math.floor(Math.random() * 38) + 1
         let randomEmoji
 
-        if(randomCharCode < 10) {
+        if (randomCharCode < 10) {
             randomEmoji = String.fromCodePoint('0x1F60' + randomCharCode.toString())
         } else {
             randomEmoji = String.fromCodePoint('0x1F6' + randomCharCode.toString())

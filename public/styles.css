@@ -25,9 +25,32 @@ body {
     border-bottom: 2px solid #000;
 }
 
+.login {
+    background: greenyellow;
+    padding: 3rem 1rem 2rem 1rem;
+}
+
 .header {
     background: #ea4632;
     text-align: center;
+}
+
+.header > * {
+    display: inline-block;
+}
+
+
+.emoticons > * {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.footer {
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
 .info {
@@ -37,6 +60,10 @@ body {
 
 .tweets {
     background: #3451b2;
+}
+
+.about {
+    background: #fb612d;
 }
 
 #avi {
